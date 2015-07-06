@@ -1,0 +1,44 @@
+<div class="title">
+        <div class="logo"><img src="images/Valor.png"/></div>
+        <p>Meet the people you're interested in meeting</p>
+    </div>
+
+    <div class="login-form">
+    	<p>Log in<br/>to your account</p>
+        <!-- <form action="http://valor.rossilabs.net:10101/software-nation/admin/login" method="post"> -->
+        <form method="post">
+            <div class="input-field">
+                <span class="fa fa-envelope"></span>
+                <input type="text" name="admin_id" placeholder="Username" ng-model='userCredentials.admin_id' />
+
+            </div>
+            <div class="input-field">
+                <span class="fa fa-lock"></span>
+                <input type="password" name="password" placeholder="Password" ng-model='userCredentials.password'/>
+            </div>
+            <div class="text-link">
+                <a href='#' id="moveToForg">Forgot your pasword?</a>
+            </div>
+            <input type="submit" name="submit" value="SIGN IN"/>
+    		<div class="text-link">
+                <!-- <a ng-href="/dashboard" ng-click="loginTry(userCredentials)">LogIn</a> -->
+                <a href ng-click="loginTry(userCredentials)">Login</a>
+    			<!-- <a href="#">Login</a> -->
+    		</div>
+   
+    
+        <div class="login-form-forg">
+            <p ng-click="forgotPasswordAnimate()">Forgot Your<br/>Password?</p>
+            <form action="#" method="post">
+                <div class="input-field">
+                    <div class="describe-text">Enter your email address to reset your password.<br/>You may need to check your spam folder.</div>
+                </div>
+                <div class="input-field forg">
+                    <span class="fa fa-envelope forg-icon"></span>
+                    <input class="forg-email" type="email" name="email" placeholder="Enter your e-mail address"/><input class="forg-pass" type="submit" name="submit" value="SUBMIT"/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
